@@ -16,6 +16,10 @@ repositories {
     maven {
         name = "github"
         url = uri("https://maven.pkg.github.com/nowakprojects/kt-time-traveler")
+        credentials {
+            username = System.getenv("GITHUB_ACTOR")
+            password = System.getenv("GITHUB_TOKEN")
+        }
     }
 }
 
